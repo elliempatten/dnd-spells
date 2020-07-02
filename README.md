@@ -20,8 +20,8 @@ All this does is set up a GraphQL server with a React frontend that connects to 
 
 ## Next steps...
 
-- Create a simple UI to show a spell list, ordered by levels
-- Allow users to search for spells and add them to their spell list
-- Add spells to the database
-- Retrieve spells from the database and API on loading the spell tracker
+- Create a simple UI to show a user's spell list, ordered by levels
+- Connect up to a 5E spells API to fetch spells
+- Allow users to search for spells from 5E and add them to their spell list
+- Add their chosen spells to the database
 - Allow users to edit fields like whether it's from an item, recharge, race/class abilities etc.
