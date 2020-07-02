@@ -1,2 +1,2 @@
-import SpellList from './spell-list';
+import SpellList from './spell-list-with-data';
 export default SpellList;
