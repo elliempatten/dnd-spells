@@ -16,8 +16,6 @@ const Spells = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>There was an error loading your spells.</p>;
 
-  console.log('data', data);
-
   return (
     <div>
       {data.spells.map(({ id }) => (
