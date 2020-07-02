@@ -1,0 +1,20 @@
+:local(.spellEntry) {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+:local(.spellName) {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+:local(.description) {
+  padding-top: 10px;
+}
+
+:local(.spellDetail) {
+  :local(.categoryTitle) {
+    font-weight: bold;
+  }
+}
