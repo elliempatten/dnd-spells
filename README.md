@@ -16,11 +16,10 @@ Using/will use Node.js, PostgreSQL, GraphQL, Apollo, Express, and React.
 
 ## But at the moment...
 
-All this does is set up a GraphQL server that connects to a database (not included in this repo for obvious reasons), which holds references to a user's spells.
+All this does is set up a GraphQL server with a React frontend that connects to a database (not included in this repo), which holds references to a user's spells.
 
 ## Next steps...
 
-- Connect up to a React frontend
 - Create a simple UI to show a spell list, ordered by levels
 - Allow users to search for spells and add them to their spell list
 - Add spells to the database
