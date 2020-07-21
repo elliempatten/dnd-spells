@@ -24,9 +24,12 @@ const LevelTable = ({ level, spells }) => {
           {isExpanded ? 'Collapse' : 'Expand'}
         </ButtonWithIcon>
       </h2>
-
-      {isExpanded && spells.map(spell => <Spell {...spell} key={spell.id} />)}
-      {isExpanded && <AddSpellsIcon level={level} />}
+      <div className={style.spellsContainer}>
+        {spells.map(spell => (
+          <Spell {...spell} key={spell.id} />
+        ))}
+        <AddSpellsIcon level={level} />
+      </div>
     </div>
   );
 };

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import style from './add-spells-bar.module';
-import ButtonWithIcon from '../ButtonWithIcon';
+import Icon from '../Icon';
 
 const AddSpellsBar = ({ level }) => {
   return (
-    <ButtonWithIcon icon="plus" size={'large'}>
-      Add Spells
-    </ButtonWithIcon>
+    <button className={style.addCard}>
+      <Icon name="plus"></Icon> Add Spells
+    </button>
   );
 };
 
