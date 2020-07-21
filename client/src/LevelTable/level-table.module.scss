@@ -1,0 +1,16 @@
+:local(.levelTable) {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+
+:local(.levelHeading) {
+  display: flex;
+  justify-content: space-between;
+}
+
+:local(.expandButton) {
+
+  border-radius: 6px;
+}
