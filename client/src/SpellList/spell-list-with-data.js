@@ -11,9 +11,11 @@ const getSpellsQuery = gql`
         id
         duration
         description
-        castingTime
         features
+        castingTime
+        range
         name
+        level
       }
     }
   }
