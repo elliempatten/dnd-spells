@@ -16,12 +16,11 @@ Using/will use Node.js, PostgreSQL, GraphQL, Apollo, Express, and React.
 
 ## But at the moment...
 
-So far I've set up a GraphQL server with a React frontend that connects to a database (not included in this repo), which holds references to a user's spells. On loading the app, we then fetch these references and use them to get more information about the user's spells from the 5E Open SRD and a formatted list of the user's spells is displayed on the frontend.
+So far I've set up a GraphQL server with a React frontend that connects to a database (not included in this repo), which holds references to a user's spells. On loading the app, we then fetch these references and use them to get more information about the user's spells from the 5E Open SRD and a formatted list of the user's spells is displayed on the frontend, ordered by level.
 
 ## Next steps...
 
-- Order spells by levels
-- Style and format the spells list to make it easily scannable and pleasing
+- Style and format the spells list to make it easily scannable and pleasing (make the levels expandable/collapsible to show/hide the contents, maybe spells expandable/collapsable too)
 - Allow users to search for spells from 5E and add them to their spell list
 - Add custom fields, and allow users to edit (eg. whether it's from an item, recharge time, race/class abilities etc.)
 - Allow some kind of searching for bonus action spells or reaction spells etc.

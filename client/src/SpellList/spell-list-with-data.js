@@ -6,12 +6,15 @@ import SpellList from './spell-list';
 const getSpellsQuery = gql`
   {
     spellDetails {
-      id
-      duration
-      description
-      castingTime
-      features
-      name
+      level
+      spells {
+        id
+        duration
+        description
+        castingTime
+        features
+        name
+      }
     }
   }
 `;
@@ -22,7 +25,7 @@ const SpellListWithData = () => {
   if (error || !data || !data.spellDetails)
     return <p>There was an error loading your spells.</p>;
 
-  return <SpellList spells={data.spellDetails} />;
+  return <SpellList spellList={data.spellDetails} />;
 };
 
 export default SpellListWithData;
