@@ -1,8 +1,13 @@
 :local(.spellEntry) {
   padding: 10px;
-  margin: 10px 0;
-  border: 1px solid black;
-  border-radius: 6px;
+  margin: 10px 10px;
+  border: 2px solid black;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 5px 5px 5px lightgray;
+  height: 320px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 :local(.spellName) {

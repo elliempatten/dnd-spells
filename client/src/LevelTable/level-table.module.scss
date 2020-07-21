@@ -1,12 +1,23 @@
 :local(.levelTable) {
   margin: 20px 0;
   padding: 10px;
-  border: 1px solid black;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 :local(.levelHeading) {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 8px;
+  background: black;
+  color: white;
+  padding: 10px;
+}
+
+:local(.spellsContainer) {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: row;
+
 }
