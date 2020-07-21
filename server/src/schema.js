@@ -55,7 +55,7 @@ const typeDefs = gql`
     castingTime: String
     range: String
     name: String!
-    level: Int@
+    level: Int
   }
 `;
 
