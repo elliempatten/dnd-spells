@@ -1,20 +1,15 @@
 import React from 'react';
 import style from './spell-list.module';
-import Spell from '../Spell';
+import LevelTable from '../LevelTable';
 
 const SpellList = ({ spellList }) => {
-  return spellList.map(({ level, spells }) => {
-    return (
-      <div>
-        <h2>Level {level}</h2>
-        <div className={style.spellsTable}>
-          {spells.map(spell => (
-            <Spell {...spell} key={spell.id} />
-          ))}
-        </div>
-      </div>
-    );
-  });
+  return (
+    <div className={style.allSpells}>
+      {spellList.map(({ level, spells }) => (
+        <LevelTable level={level} spells={spells} key={`level-${level}`} />
+      ))}
+    </div>
+  );
 };
 
 export default SpellList;
