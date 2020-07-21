@@ -8,9 +8,5 @@
 :local(.levelHeading) {
   display: flex;
   justify-content: space-between;
-}
-
-:local(.expandButton) {
-
-  border-radius: 6px;
+  align-items: center;
 }
