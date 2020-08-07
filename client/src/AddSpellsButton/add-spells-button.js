@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link, useLocation } from "react-router-dom";
 import style from './add-spells-button.module';
 import Icon from '../Icon';
 
 const AddSpellsButton = ({ level }) => {
+  const location = useLocation();
+
   return (
-    <button className={style.addCard}>
-      <Icon name="plus"></Icon> Add Spells
-    </button>
+    <Link className={style.addCard} to={{
+      pathname: `/add-spells/${level}`,
+      state: { background: location }
+    }}>
+      <Icon name="plus"></Icon><p>Add Spells</p>
+    </Link>
   );
 };
 

@@ -1,4 +1,7 @@
 :local(.addCard) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 10px;
   margin: 10px 10px;
   border: 2px solid black;
@@ -8,4 +11,10 @@
   height: 320px;
   box-sizing: border-box;
   font-size: 30px;
+  text-decoration: none;
+  color: black;
+
+  p {
+    padding-left: 10px;
+  }
 }
