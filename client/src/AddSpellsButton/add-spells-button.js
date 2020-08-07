@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import style from './add-spells-bar.module';
+import style from './add-spells-button.module';
 import Icon from '../Icon';
 
-const AddSpellsBar = ({ level }) => {
+const AddSpellsButton = ({ level }) => {
   return (
     <button className={style.addCard}>
       <Icon name="plus"></Icon> Add Spells
@@ -10,4 +10,4 @@ const AddSpellsBar = ({ level }) => {
   );
 };
 
-export default AddSpellsBar;
+export default AddSpellsButton;

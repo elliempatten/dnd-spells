@@ -12,6 +12,14 @@
   background: black;
   color: white;
   padding: 10px;
+
+  :local(.buttonGroup) {
+    display: flex;
+
+    :local(.padding) {
+      padding-right: 5px;
+    }
+  }
 }
 
 :local(.spellsContainer) {
@@ -19,5 +27,4 @@
   justify-content: left;
   align-items: center;
   flex-direction: row;
-
 }

@@ -18,6 +18,10 @@
 
 :local(.description) {
   padding-top: 10px;
+  p {
+    height: 145px;
+    overflow: scroll;
+  }
 }
 
 :local(.spellDetail) {

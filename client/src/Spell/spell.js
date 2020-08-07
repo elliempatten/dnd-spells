@@ -17,7 +17,7 @@ const Spell = ({
       <SpellDetail category="Range" detail={range} />
       <SpellDetail category="Duration" detail={duration} />
       <SpellDetail category="Features" detail={featuresAsString} />
-      <div className={style.description}>{description}</div>
+      <div className={style.description}><p>{description}</p></div>
     </div>
   );
 };
