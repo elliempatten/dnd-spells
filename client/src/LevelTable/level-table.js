@@ -6,7 +6,7 @@ import style from './level-table.module';
 import ButtonWithIcon from '../ButtonWithIcon';
 
 const LevelTable = ({ level, spells }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(spells.length >0);
 
   const handleExpandClick = () => {
     setIsExpanded(!isExpanded);
@@ -33,12 +33,12 @@ const LevelTable = ({ level, spells }) => {
           {isExpanded ? 'Collapse' : 'Expand'}
         </ButtonWithIcon></div>
       </h2>
-      <div className={style.spellsContainer}>
+      {isExpanded && <div className={style.spellsContainer}>
         {spells.map(spell => (
           <Spell {...spell} key={spell.id} />
         ))}
         <AddSpellsButton level={level} />
-      </div>
+      </div>}
     </div>
   );
 };
