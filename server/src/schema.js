@@ -2,10 +2,22 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
   type Query {
-    spells: [Spell]
-    spell(id: String!): Spell
-    spellDetails: [spellsByLevel]
+    userSpells: [UserSpell]
+    userSpell(id: String!): UserSpell
+    userSpellsDetails: [detailedSpellsByLevel]
+    filteredSpells(level: Int!): [SrdSpell]
   }
+
+  """
+  A spell, as stored in the SRD, that is available for the user to add to their spell list
+  id: the ID of the spell in the Open5E API
+  name: the human-readable name of the spell
+  """
+  type SrdSpell {
+    id: String!
+    name: String!
+  }
+
   """
   A spell, as stored in the database. Contains the information required to retrieve a spell from the SRD,
   and any custom fields.
@@ -18,21 +30,22 @@ const typeDefs = gql`
   is_intrinsic: a boolean representing whether the player always has this ability without it counting towards prepared spells
   (eg. a racial trait)
   """
-  type Spell {
+  type UserSpell {
     id: String!
-    is_from_item: Boolean
-    item_name: String
-    total_charges: Int
-    remaining_charges: Int
-    recharge_frequency: String
-    is_intrinsic: Boolean
+    # not yet
+    # is_from_item: Boolean
+    # item_name: String
+    # total_charges: Int
+    # remaining_charges: Int
+    # recharge_frequency: String
+    # is_intrinsic: Boolean
   }
   """
   Represents all the spells of a certain level.
   level: the level of the spells, as an integer, with Cantrips as level 0
   spells: a list of spells
   """
-  type spellsByLevel {
+  type detailedSpellsByLevel {
     level: Int!
     spells: [DetailedSpell]!
   }

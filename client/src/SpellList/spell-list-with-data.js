@@ -3,9 +3,9 @@ import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import SpellList from './spell-list';
 
-const getSpellsQuery = gql`
+const getUserSpellsQuery = gql`
   {
-    spellDetails {
+    userSpellsDetails {
       level
       spells {
         id
@@ -22,12 +22,12 @@ const getSpellsQuery = gql`
 `;
 
 const SpellListWithData = () => {
-  const { loading, error, data } = useQuery(getSpellsQuery);
+  const { loading, error, data } = useQuery(getUserSpellsQuery);
   if (loading) return <p>Loading...</p>;
-  if (error || !data || !data.spellDetails)
+  if (error || !data || !data.userSpellsDetails)
     return <p>There was an error loading your spells.</p>;
 
-  return <SpellList spellList={data.spellDetails} />;
+  return <SpellList spellList={data.userSpellsDetails} />;
 };
 
 export default SpellListWithData;
