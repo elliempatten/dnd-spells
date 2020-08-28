@@ -1,19 +1,10 @@
 :local(.spellEntry) {
-  padding: 10px;
-  margin: 10px 10px;
-  border: 2px solid black;
-  border-radius: 8px;
-  width: 400px;
-  box-shadow: 5px 5px 5px lightgray;
-  height: 320px;
   box-sizing: border-box;
   overflow: hidden;
-}
-
-:local(.spellName) {
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding-bottom: 5px;
+  font-size: 1.25rem;
+  border-bottom: 1px solid grey;
+  height: 50px;
+  cursor: pointer;
 }
 
 :local(.description) {
@@ -24,8 +15,6 @@
   }
 }
 
-:local(.spellDetail) {
-  :local(.categoryTitle) {
-    font-weight: bold;
-  }
+:local(.expandedDetails) {
+  border-bottom: 1px solid grey;
 }

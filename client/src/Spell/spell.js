@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './spell.module';
 
 const Spell = ({
@@ -7,27 +7,35 @@ const Spell = ({
   duration,
   name,
   description,
-  features
+  features,
 }) => {
   const featuresAsString = features.join(', ');
+  const [isExpanded, setIsExpanded] = useState(false);
   return (
-    <div className={style.spellEntry}>
-      <div className={style.spellName}>{name}</div>
-      <SpellDetail category="Casting time" detail={castingTime} />
-      <SpellDetail category="Range" detail={range} />
-      <SpellDetail category="Duration" detail={duration} />
-      <SpellDetail category="Features" detail={featuresAsString} />
-      <div className={style.description}><p>{description}</p></div>
-    </div>
-  );
-};
-
-const SpellDetail = ({ category, detail }) => {
-  return (
-    <div className={style.spellDetail}>
-      <span className={style.categoryTitle}>{category}: </span>
-      {detail}
-    </div>
+    <>
+      <tr
+        className={style.spellEntry}
+        onClick={() => setIsExpanded(!isExpanded)}
+      >
+        <td>{name}</td>
+        <td>{castingTime}</td>
+        <td>{range}</td>
+      </tr>
+      {isExpanded && (
+        <tr>
+          <td colSpan="3" className={style.expandedDetails}>
+            <p>
+              <span style={{ fontWeight: 'bold' }}>Duration:</span> {duration}
+            </p>
+            <p>
+              <span style={{ fontWeight: 'bold' }}>Features:</span>{' '}
+              {featuresAsString ? featuresAsString : 'N/A'}
+            </p>
+            <p>{description}</p>
+          </td>
+        </tr>
+      )}
+    </>
   );
 };
 

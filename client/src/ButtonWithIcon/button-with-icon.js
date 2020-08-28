@@ -2,7 +2,7 @@ import React from 'react';
 import Icon from '../Icon';
 import style from './button-with-icon.module';
 
-const SIZES = { small: 60, medium: 90, large: 120 };
+export const SIZES = { small: 60, medium: 90, large: 120 };
 
 const ButtonWithIcon = ({ size, children, icon, onClick }) => {
   return (

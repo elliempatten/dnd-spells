@@ -1,10 +1,11 @@
 :local(.button) {
   padding: 5px;
   border: 1px solid black;
-  color: white;
+  color: black;
   border-radius: 6px;
-  background-color: maroon;
+  background-color: white;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  font-size: 0.9rem;
 }

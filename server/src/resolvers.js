@@ -5,7 +5,15 @@ const client = new Client({
   host: 'localhost',
   database: 'dndspellsapp',
 });
-client.connect();
+client.connect((e) => {
+  if (e) {
+    console.log(
+      'Could not connect to database. Make sure postgres is running (brew services start postgresql)'
+    );
+  } else {
+    console.log('connected to dndspellsapp database');
+  }
+});
 
 const spellsApiBase = 'https://api.open5e.com/spells/';
 

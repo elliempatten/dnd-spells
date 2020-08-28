@@ -1,30 +1,46 @@
 :local(.levelTable) {
-  margin: 20px 0;
+  margin: 10px 0;
   padding: 10px;
-  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+
+  th {
+    opacity: 0.4;
+    font-weight: normal;
+    padding-bottom: 5px;
+  }
 }
 
 :local(.levelHeading) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-radius: 8px;
-  background: black;
-  color: white;
-  padding: 10px;
+  font-size: 2rem;
+  margin: 10px 0;
 
   :local(.buttonGroup) {
     display: flex;
-
-    :local(.padding) {
-      padding-right: 5px;
-    }
   }
 }
 
 :local(.spellsContainer) {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  flex-direction: row;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+:local(.name) {
+  width: 50%;
+}
+
+:local(.range) {
+  width: 25%;
+}
+
+:local(.castingTime) {
+  width: 25%;
+}
+
+:local(.padding) {
+  padding-right: 2px;
 }
