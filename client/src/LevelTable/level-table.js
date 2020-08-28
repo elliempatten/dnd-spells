@@ -6,7 +6,7 @@ import style from './level-table.module';
 import ButtonWithIcon from '../ButtonWithIcon';
 
 const LevelTable = ({ level, spells }) => {
-  const [isExpanded, setIsExpanded] = useState(spells.length >0);
+  const [isExpanded, setIsExpanded] = useState(spells.length > 0);
 
   const handleExpandClick = () => {
     setIsExpanded(!isExpanded);
@@ -17,28 +17,27 @@ const LevelTable = ({ level, spells }) => {
       <h2 className={style.levelHeading}>
         Level {level}{' '}
         <div className={style.buttonGroup}>
-        <ButtonWithIcon
-          icon={'plus'}
-          onClick={()=>{}}
-          size={'small'}
-        >
-          Add
-        </ButtonWithIcon>
-        <div className={style.padding}></div>
-        <ButtonWithIcon
-          icon={isExpanded ? 'chevron-up' : 'chevron-down'}
-          onClick={handleExpandClick}
-          size={'medium'}
-        >
-          {isExpanded ? 'Collapse' : 'Expand'}
-        </ButtonWithIcon></div>
+          <AddSpellsButton level={level} />
+          <div className={style.padding}></div>
+          <ButtonWithIcon
+            icon={isExpanded ? 'chevron-up' : 'chevron-down'}
+            onClick={handleExpandClick}
+            size={'medium'}
+          >
+            {isExpanded ? 'Collapse' : 'Expand'}
+          </ButtonWithIcon>
+        </div>
       </h2>
-      {isExpanded && <div className={style.spellsContainer}>
-        {spells.map(spell => (
-          <Spell {...spell} key={spell.id} />
-        ))}
-        <AddSpellsButton level={level} />
-      </div>}
+      {isExpanded && (
+        <table className={style.spellsContainer}>
+          <th className={style.name}>Name</th>
+          <th className={style.castingTime}>Casting Time</th>
+          <th className={style.range}>Range</th>
+          {spells.map((spell) => (
+            <Spell {...spell} key={spell.id} />
+          ))}
+        </table>
+      )}
     </div>
   );
 };

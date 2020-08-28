@@ -1,20 +1,14 @@
-:local(.addCard) {
+:local(.addButton) {
+  padding: 5px;
+  border: 1px solid black;
+  color: white;
+  border-radius: 6px;
+  background-color: maroon;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 10px;
-  margin: 10px 10px;
-  border: 2px solid black;
-  border-radius: 8px;
-  width: 400px;
-  box-shadow: 5px 5px 5px lightgray;
-  height: 320px;
-  box-sizing: border-box;
-  font-size: 30px;
+  font-size: 1rem;
   text-decoration: none;
-  color: black;
-
-  p {
-    padding-left: 10px;
-  }
+  font-weight: normal;
+  font-size: 0.9rem;
 }
